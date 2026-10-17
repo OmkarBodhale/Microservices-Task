@@ -58,6 +58,36 @@ This document provides details on testing various services after running the `do
 
 ---
 
+##Instructions to build Docker images for each service:
+1. User Service (Port 3000)
+2. Product Service (Port 3001)
+3. Gateway Service (Port 3003)
+
+**Run the below Docker commands to create and test each service docker file individually
+   Command to create Docker Images
+   ```
+   docker build -t user-service:v1.0 .\Microservices\user-service\.
+   docker build -t product-service:v1.0 .\Microservices\product-service\.
+   docker build -t gateway-service:v1.0 .\Microservices\gateway-service\.
+   ```
+  Commands to get Docker Container running using specific Docker Image
+     
+     ```
+     docker run -p 3000:3000 -d --name user-service user-service:v1.0 
+     docker run -p 3001:3001 -d --name product-service product-service:v1.0
+     docker run -p 3003:3003 -d --name gateway-service gateway-service:v1.0 
+     ```
+  Verify whether each container running in Docker Desktop
+  <img width="1917" height="985" alt="image" src="https://github.com/user-attachments/assets/67d726c4-8c28-4137-bb74-d0145a0d350e" />
+
+  Verify Individual service running in the browser:
+  <img width="1917" height="221" alt="image" src="https://github.com/user-attachments/assets/e0cb8d4d-468b-494a-bb9b-3000f55368cf" />
+  <img width="1917" height="267" alt="image" src="https://github.com/user-attachments/assets/aa1f4fcb-6b33-437b-a66a-45cb208e740b" />
+  <img width="1917" height="262" alt="image" src="https://github.com/user-attachments/assets/8bb8629e-fc7c-4169-a820-78f9764e4cbc" />
+
+
+
+
 ## Instructions
 1. Start all services using the `docker-compose` file:
    ```
