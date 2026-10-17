@@ -91,8 +91,11 @@ This document provides details on testing various services after running the `do
 ## Instructions
 1. Start all services using the `docker-compose` file:
    ```
-   docker-compose up
+   docker compose -f .\docker-compose.yml up -d
    ```
 2. Once the services are running, use the above endpoints to verify the functionality.
-
+   <img width="1902" height="916" alt="image" src="https://github.com/user-attachments/assets/c1d0653c-fff9-4a3f-b67b-960f91440bd5" />
+  <img width="1917" height="221" alt="image" src="https://github.com/user-attachments/assets/e0cb8d4d-468b-494a-bb9b-3000f55368cf" />
+  <img width="1917" height="267" alt="image" src="https://github.com/user-attachments/assets/aa1f4fcb-6b33-437b-a66a-45cb208e740b" />
+  <img width="1917" height="262" alt="image" src="https://github.com/user-attachments/assets/8bb8629e-fc7c-4169-a820-78f9764e4cbc" />
 Happy testing!
